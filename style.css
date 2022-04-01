@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   height: 80px;
   display: flex;
@@ -20,6 +24,14 @@ img {
 
 p {
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .nav__container {
@@ -69,6 +81,52 @@ li {
 .nav__link-primary:hover {
   text-decoration: none;
 }
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+}
+
+.manu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  font-size: 40px;
+  color: white;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+}
+
+/* Landing */
 
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
@@ -136,6 +194,10 @@ button:active {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.not-allowed {
+  cursor: not-allowed;
 }
 
 /* Highlights */
@@ -274,4 +336,38 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Footer */
+
+footer {
+  background-color: #242424;
+}
+
+.footer__logo {
+  display: flex;
+}
+
+.footer__logo--img {
+  width: 160px;
+  filter: grayscale(1) invert(1);
+}
+
+.footer__link,
+.footer__copyright {
+  color: white;
+}
+
+footer .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__list {
+  margin: 20px 0 24px 0;
+}
+
+.footer__link {
+  padding: 0 8px;
 }

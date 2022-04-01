@@ -101,6 +101,11 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+}
+
+.menu--open .manu__backdrop {
+  display: flex;
 }
 
 .menu__links {

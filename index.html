@@ -19,19 +19,19 @@
                  <li><a href="#" class="nav__link">Conatct</a></li>
                  <li><a href="#" class="nav__link nav__link-primary">Books</a></li>
                 </ul>
-            </div>
-            <button class="btn__menu" onclick="openMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="manu__backdrop">
-                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                    <i class="fa-solid fa-xmark"></i>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
-                <ul class="menu__links">
-                    <li class="manu__list"><a class="menu__link" href="#">Home</a></li>
-                    <li class="manu__list"><a class="menu__link" href="#features">Books</a></li>
-                    <li class="manu__list"><a class="menu__link not-allowed">Contact</a></li>
-                </ul>
+                <div class="manu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="manu__list"><a class="menu__link" href="#" onclick="closeMenu()">Home</a></li>
+                        <li class="manu__list"><a class="menu__link" href="#features"onclick="closeMenu()" >Books</a></li>
+                        <li class="manu__list"><a class="menu__link not-allowed" onclick="closeMenu()">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -39,7 +39,9 @@
                 <div class="header__description">
                     <h1>Japan's most awarded online library platform</h1>
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
-                    <button class="btn">Browse books</button>
+                    <a href="#features">
+                        <button class="btn">Browse books</button>
+                    </a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="">

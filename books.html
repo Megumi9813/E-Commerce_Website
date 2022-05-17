@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
-  <link rel="stylesheet" href="./style.css" >
-  <script src="https://kit.fontawesome.com/82cc084487.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/f50fc78627.js" crossorigin="anonymous"></script>
   <script src="index.js"></script>
   <script src="books.js"></script>
 </head>
@@ -16,25 +16,25 @@
   <section>
     <nav>
       <div class="nav__container">
-          <img class="logo" src="./assets/Library.svg" alt="">
-          <ul class="nav__links">
-           <li><a href="#" class="nav__link">Home</a></li>
-           <li><a href="#" class="nav__link">Conatct</a></li>
-           <li><a href="#" class="nav__link nav__link-primary">Books</a></li>
-          </ul>
-          <button class="btn__menu" onclick="openMenu()">
-              <i class="fa-solid fa-bars"></i>
+        <img class="logo" src="./assets/Library.svg" alt="">
+        <ul class="nav__links">
+          <li><a href="./index.html" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Conatct</a></li>
+          <li><a href="#" class="nav__link nav__link-primary">Books</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="manu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
           </button>
-          <div class="manu__backdrop">
-              <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                  <i class="fa-solid fa-xmark"></i>
-              </button>
-              <ul class="menu__links">
-                  <li class="manu__list"><a class="menu__link" href="#" onclick="closeMenu()">Home</a></li>
-                  <li class="manu__list"><a class="menu__link" href="#features"onclick="closeMenu()" >Books</a></li>
-                  <li class="manu__list"><a class="menu__link not-allowed" onclick="closeMenu()">Contact</a></li>
-              </ul>
-          </div>
+          <ul class="menu__links">
+            <li class="manu__list"><a class="menu__link" href="#" onclick="closeMenu()">Home</a></li>
+            <li class="manu__list"><a class="menu__link" href="#features" onclick="closeMenu()">Books</a></li>
+            <li class="manu__list"><a class="menu__link not-allowed" onclick="closeMenu()">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </section>
@@ -47,30 +47,15 @@
             <h2 class="section__title books__header--title">
               All <span class="purple">Books</span>
             </h2>
-            <select id="filter">
+            <select id="filter" onchange="filterBooks(event)">
               <option value="" disabled selected>Sort</option>
-              <option value="LOW_TO_HIGH">Price, Low to High</option>
-              <option value="HIGH_TO_LOW">Price, High to Low</option>
+              <option value="LOW_TO_HIGH">Price: Low to High</option>
+              <option value="HIGH_TO_LOW">Price: High to Low</option>
               <option value="RATING">Rating</option>
             </select>
           </div>
-          <div class="book">
-            <figure class="book__img--wrapper">
-              <img class="book__img" src="assets/atomic habits.jpg" alt="">
-            </figure>
-            <div class="book__title">
-              Atomic Habits
-            </div>
-            <div class="book__ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="book__price">
-              <span class="book__price--normal">$59.95</span> $14.95
-            </div>
+          <div class="books books__loading">
+            <i class="fas fa-spinner books__loading--spinner"></i>
           </div>
         </div>
       </div>
@@ -86,7 +71,7 @@
           </figure>
         </a>
         <div class="footer__list">
-          <a href="#" class="footer__link">Home</a>
+          <a href="./index.html" class="footer__link">Home</a>
           <a class="footer__link no-cursor">About</a>
           <a href="#features" class="footer__link">Books</a>
           <a class="footer__link no-cursor">Contact</a>
